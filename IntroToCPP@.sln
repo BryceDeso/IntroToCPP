@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BattleLoop", "BattleLoop\Ba
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TicTacToe", "TicTacToe\TicTacToe.vcxproj", "{04D73E20-CF0D-4879-9D9C-8579E0552839}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumberGuessGame", "NumberGuessGame\NumberGuessGame.vcxproj", "{58D34482-684D-47AB-9176-CE9E3B57B972}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{04D73E20-CF0D-4879-9D9C-8579E0552839}.Release|x64.Build.0 = Release|x64
 		{04D73E20-CF0D-4879-9D9C-8579E0552839}.Release|x86.ActiveCfg = Release|Win32
 		{04D73E20-CF0D-4879-9D9C-8579E0552839}.Release|x86.Build.0 = Release|Win32
+		{58D34482-684D-47AB-9176-CE9E3B57B972}.Debug|x64.ActiveCfg = Debug|x64
+		{58D34482-684D-47AB-9176-CE9E3B57B972}.Debug|x64.Build.0 = Debug|x64
+		{58D34482-684D-47AB-9176-CE9E3B57B972}.Debug|x86.ActiveCfg = Debug|Win32
+		{58D34482-684D-47AB-9176-CE9E3B57B972}.Debug|x86.Build.0 = Debug|Win32
+		{58D34482-684D-47AB-9176-CE9E3B57B972}.Release|x64.ActiveCfg = Release|x64
+		{58D34482-684D-47AB-9176-CE9E3B57B972}.Release|x64.Build.0 = Release|x64
+		{58D34482-684D-47AB-9176-CE9E3B57B972}.Release|x86.ActiveCfg = Release|Win32
+		{58D34482-684D-47AB-9176-CE9E3B57B972}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
