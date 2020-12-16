@@ -17,7 +17,7 @@ void Game::run()
 
 void Game::start()
 {
-	m_player = new Character(100, 50);
+	m_player = new Character(100, 20);
 	m_wizard = new Character(90, 10);
 }
 
