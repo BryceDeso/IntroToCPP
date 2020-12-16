@@ -5,8 +5,9 @@ public:
 	Character();
 	Character(float health, float damage);
 
-	void attack(Character other);
+	void attack(Character* other);
 	float takeDamage(float damage);
+	bool getIsAlive();
 	float getDamage() { return m_damage; }
 	float getHealth() { return m_health; }
 

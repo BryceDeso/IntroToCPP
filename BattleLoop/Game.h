@@ -16,7 +16,7 @@ private:
 	void end();
 
 private:
-	bool m_gameOver;
-	Character m_player1;
-	Character m_player2;
+	bool m_gameOver = false;
+	Character* m_player;
+	Character* m_wizard;
 };

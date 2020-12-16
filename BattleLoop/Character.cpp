@@ -12,9 +12,14 @@ Character::Character(float health, float damage)
 	m_damage = damage;
 }
 
-void Character::attack(Character other)
+bool Character::getIsAlive()
 {
-	other.takeDamage(m_damage);
+	return m_health > 0;
+}
+
+void Character::attack(Character* other)
+{
+	other->takeDamage(m_damage);
 }
 
 float Character::takeDamage(float damage)
