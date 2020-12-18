@@ -18,7 +18,7 @@ void Game::run()
 void Game::start()
 {
 	m_player = new Character(100, 20);
-	m_wizard = new Character(90, 10);
+	m_wizard = new Character(100, 10);
 }
 
 void Game::update()
@@ -44,9 +44,18 @@ void Game::update()
 		system("pause");
 	}
 
-	std::cout << "Wizard attacks and does " << m_wizard->getDamage() << " damage to Player." << std::endl;
-	m_wizard->attack(m_player);
-	system("pause");
+	if (action == 1)
+	{
+		std::cout << "Wizard attacks and does " << m_wizard->getDamage() << " damage to Player." << std::endl;
+		m_wizard->attack(m_player);
+		system("pause");
+	}
+	else if (action == 2)
+	{
+		std::cout << "While you are still down, the Wizard attacks again.\nWizard attacks and does  " << m_wizard->getDamage() << " damage to Player." << std::endl;
+		m_wizard->attack(m_player);
+		system("pause");
+	}
 }
 
 void Game::draw()

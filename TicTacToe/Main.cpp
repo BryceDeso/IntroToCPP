@@ -9,13 +9,13 @@ int main()
 	bool draw = false;
 	char grid[3][3] = { {'_', '_', '_'}, {'_', '_', '_'}, {'_', '_', '_'} };
 
-	char player1[] = "name";
+	char player1[60];
 
 	std::cout << "Player1, what is your name?" << std::endl;
 
 	std::cin >> player1;
 
-	char player2[] = "name";
+	char player2[60];
 
 	std::cout << "Player2, what is your name?" << std::endl;
 
