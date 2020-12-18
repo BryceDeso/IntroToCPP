@@ -33,7 +33,23 @@ int main()
 			//cheating and boot them out of the program since it will always only take a maximum of 
 			//five tries to narrow down the users number.
 			wrongcounter++;
-			//std::cout << wrongcounter << std::endl;
+
+			std::cout << "wrongcounter: ";
+			std::cout << wrongcounter << std::endl;
+
+			if (wrongcounter == 4)
+			{
+				if (guess == 0)
+				{
+					std::cout << "HEY STOP CHEATING! GET OUTTA HERE!" << std::endl;
+					return 0;
+				}
+				if (guess == 11)
+				{
+					std::cout << "HEY STOP CHEATING! GET OUTTA HERE!" << std::endl;
+					return 0;
+				}
+			}
 			if (wrongcounter == 5)
 			{
 				std::cout << "HEY STOP CHEATING! GET OUTTA HERE!" << std::endl;
