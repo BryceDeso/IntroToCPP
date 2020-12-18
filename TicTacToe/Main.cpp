@@ -9,6 +9,7 @@ int main()
 	bool draw = false;
 	char grid[3][3] = { {'_', '_', '_'}, {'_', '_', '_'}, {'_', '_', '_'} };
 
+	//Asks both players for thier names.
 	char player1[60];
 
 	std::cout << "Player1, what is your name?" << std::endl;
@@ -21,6 +22,7 @@ int main()
 
 	std::cin >> player2;
 
+	//Draws the tictactoe board
 	system("cls");
 	std::cout << (char)grid[0][0] << "|" << (char)grid[0][1] << "|" << (char)grid[0][2] << std::endl;
 	std::cout << (char)grid[1][0] << "|" << (char)grid[1][1] << "|" << (char)grid[1][2] << std::endl;
@@ -28,6 +30,7 @@ int main()
 
 	while (gameOver == false)
 	{
+		//Asks the player if where they want to put thier token based on the number keypad.
 		if (gameOver == false)
 		{
 			char player1selec = ' ';
@@ -177,12 +180,15 @@ int main()
 		std::cout << grid[1][0] << "|" << grid[1][1] << "|" << grid[1][2] << std::endl;
 		std::cout << grid[2][0] << "|" << grid[2][1] << "|" << grid[2][2] << std::endl;
 
-		i++;
-
-		if (i == 5)
+		if (gameOver == false)
 		{
-			gameOver = true;
-			draw = true;
+			i++;
+
+			if (i == 5)
+			{
+				gameOver = true;
+				draw = true;
+			}
 		}
 
 		if (gameOver == false)
