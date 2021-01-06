@@ -30,7 +30,7 @@ void Game::start()
 
 	std::cin >> i;
 
-	//Will load player and wizard stats from last saved game.
+	//Will load player and wizard stats from a saved game.
 	if (i == 1)
 	{
 		file.open("save.txt", std::ios::in | std::ios::binary);
@@ -78,7 +78,7 @@ void Game::update()
 		std::cout << "Player took " << m_wizard->getDamage() << " damage." << std::endl;
 		system("pause");
 	}
-	//Saves the player and wizards stats at the moment of save.
+	//Saves the player and wizards current stats to file.
 	else if (action == 3)
 	{
 		file.open("save.txt", std::ios::out | std::ios::binary);
