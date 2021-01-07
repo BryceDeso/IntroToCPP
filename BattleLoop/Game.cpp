@@ -44,7 +44,7 @@ void Game::start()
 		}
 		else
 		{
-			file.read((char*)&m_player, sizeof(Character));
+			file.read((char*)m_player, sizeof(Character));
 		}
 		file.close();
 	}
@@ -90,7 +90,7 @@ void Game::update()
 		}
 		else
 		{
-			file.write((char*)&m_player, sizeof(Character));
+			file.write((char*)m_player, sizeof(Character));
 		}
 		file.close();	
 	}

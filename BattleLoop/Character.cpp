@@ -4,6 +4,7 @@ Character::Character()
 {
 	health = 100;
 	damage = 10;
+	test = 15;
 }
 
 Character::Character(float Health, float Damage)
