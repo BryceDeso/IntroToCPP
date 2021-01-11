@@ -81,7 +81,7 @@ void Game::update()
 	//Saves the player and wizards current stats to file.
 	else if (action == 3)
 	{
-		file.open("save.txt", std::ios::out | std::ios::binary);
+		file.open("save.txt", std::ios::out | std::ios::binary | std::ios::app);
 
 		if (!file.is_open())
 		{
