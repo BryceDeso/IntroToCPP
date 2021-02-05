@@ -7,6 +7,7 @@ public:
 
 	float health;
 	float damage;
+	float test;
 	void attack(Character* other);
 	float takeDamage(float damage);
 	bool getIsAlive();

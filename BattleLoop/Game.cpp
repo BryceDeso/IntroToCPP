@@ -25,12 +25,12 @@ void Game::start()
 
 	//Asks player if they would like to reload a saved game or start a new game.
 	std::cout << "Would you like to load save data?" << std::endl;
-	std::cout << "Press 1 to load last save." << std::endl;
+	std::cout << "Press 1 to load a save." << std::endl;
 	std::cout << "Press 2 to start new game." << std::endl;
 
 	std::cin >> i;
 
-	//Will load player and wizard stats from last saved game.
+	//Will load player and wizard stats from a saved game.
 	if (i == 1)
 	{
 		file.open("save.txt", std::ios::in, std::ios::binary);
@@ -44,11 +44,7 @@ void Game::start()
 		}
 		else
 		{
-			file >> m_player->health;
-			file >> m_player->damage;
-
-			file >> m_wizard->health;
-			file >> m_wizard->damage;
+			file.read((char*)m_player, sizeof(Character));
 		}
 		file.close();
 	}
@@ -82,7 +78,7 @@ void Game::update()
 		std::cout << "Player took " << m_wizard->getDamage() << " damage." << std::endl;
 		system("pause");
 	}
-	//Saves the player and wizards stats at the moment of save.
+	//Saves the player and wizards current stats to file.
 	else if (action == 3)
 	{
 		file.open("save.txt", std::ios::app , std::ios::binary);
@@ -94,11 +90,7 @@ void Game::update()
 		}
 		else
 		{
-			file << m_player->health << std::endl;
-			file << m_player->damage << std::endl;
-
-			file << m_wizard->health << std::endl;
-			file << m_wizard->damage << std::endl;
+			file.write((char*)m_player, sizeof(Character));
 		}
 		file.close();	
 	}

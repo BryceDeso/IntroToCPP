@@ -4,12 +4,13 @@ Character::Character()
 {
 	health = 100;
 	damage = 10;
+	test = 15;
 }
 
-Character::Character(float health, float damage)
+Character::Character(float Health, float Damage)
 {
-	health = health;
-	damage = damage;
+	health = Health;
+	damage = Damage;
 }
 
 bool Character::getIsAlive()
