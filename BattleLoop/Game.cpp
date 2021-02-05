@@ -33,7 +33,7 @@ void Game::start()
 	//Will load player and wizard stats from last saved game.
 	if (i == 1)
 	{
-		file.open("save.txt", std::ios::in);
+		file.open("save.txt", std::ios::in, std::ios::binary);
 
 		if (!file.is_open())
 		{
@@ -85,7 +85,7 @@ void Game::update()
 	//Saves the player and wizards stats at the moment of save.
 	else if (action == 3)
 	{
-		file.open("save.txt", std::ios::out);
+		file.open("save.txt", std::ios::app , std::ios::binary);
 
 		if (!file.is_open())
 		{
